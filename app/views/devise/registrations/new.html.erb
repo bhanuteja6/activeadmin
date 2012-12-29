@@ -13,10 +13,9 @@
   <%= f.password_field :password_confirmation %></div>
   
   <div><%= f.label :role %><br />
-  GHMAdmin <%= f.check_box :role, { :multiple => true }, 'ghmadmin',nil %> <br>
-   Owner<%= f.check_box :role, { :multiple => true }, 'owner',nil %> <br>
-   Developer <%= f.check_box :role, { :multiple => true }, 'developer',nil %></div>
-
+  
+    <%= f.radio_button :role, "Owner" %> Owner
+    <%= f.radio_button :role, "Developer" %> Developer
   <div><%= f.submit "Sign up" %></div>
 <% end %>
 
